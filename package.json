@@ -1,0 +1,29 @@
+{
+  "name": "atv_pw2",
+  "version": "1.0.0",
+  "description": "Uma das atividades mais divertidas da DS",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "atvpw2"
+  },
+  "keywords": [
+    "atividade",
+    "pw2",
+    "nodejs",
+    "mysql",
+    "github"
+  ],
+  "author": "Robson Luciano",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql2": "^3.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
