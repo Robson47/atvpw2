@@ -2,7 +2,7 @@ const sequelize = require("sequelize");
 const connection = require("../database/database");
 
 const Produto = connection.define(
-    'tbl_produto',
+    'tbl_produtos',
     {
         codigo_produto:{
             type: sequelize.INTEGER,
@@ -12,7 +12,6 @@ const Produto = connection.define(
         },
         codigo_categoria:{
             type: sequelize.INTEGER,
-            allowNull: false,
             unsigned: true
         },
         nome_produto:{

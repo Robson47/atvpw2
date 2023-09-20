@@ -2,7 +2,7 @@ const sequelize = require("sequelize");
 const connection = require("../database/database");
 
 const Categoria = connection.define(
-    'tbl_categoria',
+    'tbl_categorias',
     {
         codigo_categoria:{
             type: sequelize.INTEGER,
