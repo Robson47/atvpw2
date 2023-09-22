@@ -3,11 +3,8 @@ const produtoModel = require("../model/Produto");
 const router = express.Router();
 
 router.post("/produto/cadastrarProduto", (req, res) =>{
-    let {nome_produto} = req.body;
-    let {valor_produto} = req.body;
-    let {imagem_produto} = req.body;
-    let {descricao_produto} = req.body;
-    let {codigo_produto} = req.body;
+    let {nome_produto, valor_produto, imagem_produto, descricao_produto } = req.body;
+    const ProdutoPost = produtoModel.create({nome_produto, valor_produto, imagem_produto, descricao_produto, codigo_produto});
 
     console.log(codigo_produto);
     console.log(nome_produto);
@@ -15,7 +12,7 @@ router.post("/produto/cadastrarProduto", (req, res) =>{
     console.log(imagem_produto);
     console.log(descricao_produto);
 
-    produtoModel.create({nome_produto}, {valor_produto}, {imagem_produto}, {descricao_produto}, {codigo_produto})
+    ProdutoPost
     .then(() => {
         return res.status(201).json({
             errorStatus: false,
