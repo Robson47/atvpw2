@@ -21,6 +21,6 @@ const Categoria = connection.define(
     }
 );
 
-Categoria.sync({force:false});
+Categoria.sync({force:true});
 
 module.exports = Categoria;

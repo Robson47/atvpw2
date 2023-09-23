@@ -23,6 +23,6 @@ const produtoController = require("./controller/ProdutoController");
 app.use("/", produtoController);
 
 //CONFIRMAÇÃO DO SERVIDOR ONLINE (REQUISIÇÕES E RESPOSTAS)
-app.listen(3000, ()=>{
-    console.log("O SERVIDOR ESTÁ ONLINE EM: http://localhost:3000");
+app.listen(3001, ()=>{
+    console.log("O SERVIDOR ESTÁ ONLINE EM: http://localhost:3001");
 });

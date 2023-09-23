@@ -33,6 +33,6 @@ const Produto = connection.define(
     }
 );
 
-Produto.sync({force:false});
+Produto.sync({force:true});
 
 module.exports = Produto;
