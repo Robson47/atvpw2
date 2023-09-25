@@ -2,7 +2,7 @@ const sequelize = require("sequelize");
 const connection = require("../database/database");
 
 const Produto = connection.define(
-    'tbl_produtos',
+    "tbl_produtos",
     {
         codigo_produto:{
             type: sequelize.INTEGER,
@@ -33,6 +33,6 @@ const Produto = connection.define(
     }
 );
 
-Produto.sync({force:true});
+Produto.sync({force:false});
 
 module.exports = Produto;

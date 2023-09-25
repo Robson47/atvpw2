@@ -3,7 +3,7 @@ const sequelize = require("sequelize");
 const connection = new sequelize(
     "atv_pw2",
     "root",
-    "",
+    "12345",
     {
         host: "localhost",
         port: "3306",

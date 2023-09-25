@@ -1,7 +1,7 @@
 {
   "name": "atv_pw2",
   "version": "1.0.0",
-  "description": "Uma das atividades mais divertidas da DS",
+  "description": "Uma das atividades mais divertidas de DS",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js"
