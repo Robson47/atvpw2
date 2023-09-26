@@ -1,9 +1,11 @@
+//IMPORTANDO O MÓDULO DO SEQUELIZE
 const sequelize = require("sequelize");
 
+//CONFIGURANDO A CONEXÃO COM O BANCO DE DADOS
 const connection = new sequelize(
     "atv_pw2",
     "root",
-    "12345",
+    "",
     {
         host: "localhost",
         port: "3306",
@@ -12,4 +14,5 @@ const connection = new sequelize(
     }
 );
 
+//EXPORTANDO A CONEXÃO
 module.exports = connection;

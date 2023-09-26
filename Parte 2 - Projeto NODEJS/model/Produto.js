@@ -1,6 +1,10 @@
+//IMPORTANDO MÓDULO SEQUELIZE
 const sequelize = require("sequelize");
+
+//CRIANDO UMA CONEXÃO COM O BANCO DE DADOS
 const connection = require("../database/database");
 
+//DEFININDO A CONEXÃO E INSERINDO TABELAS
 const Produto = connection.define(
     "tbl_produtos",
     {
@@ -33,6 +37,8 @@ const Produto = connection.define(
     }
 );
 
+//SICRONIZAÇÃO COM O BANCO DE DADOS
 Produto.sync({force:false});
 
+//EXPORTANDO AS TABELAS DO BANCO DE DADOS
 module.exports = Produto;

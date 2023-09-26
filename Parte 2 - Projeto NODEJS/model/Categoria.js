@@ -1,8 +1,12 @@
+//IMPORTANDO MÓDULO SEQUELIZE
 const sequelize = require("sequelize");
+
+//CRIANDO UMA CONEXÃO COM O BANCO DE DADOS
 const connection = require("../database/database");
 
+//DEFININDO A CONEXÃO E INSERINDO TABELAS
 const Categoria = connection.define(
-    'tbl_categorias',
+    "tbl_categorias",
     {
         codigo_categoria:{
             type: sequelize.INTEGER,
@@ -21,6 +25,8 @@ const Categoria = connection.define(
     }
 );
 
-Categoria.sync({force:true});
+//SICRONIZAÇÃO COM O BANCO DE DADOS
+Categoria.sync({force:false});
 
+//EXPORTANDO AS TABELAS DO BANCO DE DADOS
 module.exports = Categoria;

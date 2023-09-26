@@ -3,8 +3,7 @@ CREATE DATABASE atv_pw2;
 
 /* SELECÃO DO BANCO DE DADOS */
 USE atv_pw2;
-DROP TABLE tbl_produtos;
-DROP TABLE tbl_categorias;
+
 /* CRIAÇÃO DA TABELA PRODUTOS */
 CREATE TABLE tbl_produtos (
 	codigo_produto INT UNSIGNED KEY AUTO_INCREMENT,
@@ -20,9 +19,3 @@ CREATE TABLE tbl_categorias (
     nome_categoria VARCHAR(255) NOT NULL,
     observacoes_categoria TEXT NOT NULL
 );
-SELECT * FROM tbl_produtos;
-
-/* IMPLEMENTAÇÃO DA CHAVE ESTRANGEIRA NA TABELA PRODUTOS */
-ALTER TABLE tbl_produto ADD CONSTRAINT fk_tbl_produto_tbl_categoria
-FOREIGN KEY (codigo_categoria)
-REFERENCES tbl_categoria(codigo_categoria);
