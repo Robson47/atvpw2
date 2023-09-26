@@ -9,7 +9,7 @@ app.use(express.json());
 
 //TESTE DE CONEXÃO  
 const connection = require("./database/database");
-console.log(connection);
+console.log(connection);//EXIBIÇÃO DA CONEXÃO NO CONSOLE
 
 //CONFIGURANDO O EXPRESS PARA TRABALHAR COM DADOS DE FORMULÁRIO
 app.use(express.urlencoded({extended:true}));

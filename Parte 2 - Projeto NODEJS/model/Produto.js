@@ -4,6 +4,9 @@ const sequelize = require("sequelize");
 //CRIANDO UMA CONEXÃO COM O BANCO DE DADOS
 const connection = require("../database/database");
 
+//IMPORTANDO A TABELA CATEGORIA
+const Categoria = require("./Categoria");
+
 //DEFININDO A CONEXÃO E INSERINDO TABELAS
 const Produto = connection.define(
     "tbl_produtos",
@@ -36,6 +39,11 @@ const Produto = connection.define(
         }
     }
 );
+
+Produto.belongsTo(Categoria, {
+    foreignKey: "codigo_categoria",
+    allowNull: false
+});
 
 //SICRONIZAÇÃO COM O BANCO DE DADOS
 Produto.sync({force:false});
