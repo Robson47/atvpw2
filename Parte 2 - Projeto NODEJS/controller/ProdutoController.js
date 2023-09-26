@@ -50,6 +50,7 @@ router.get("/produto/listarProduto", (req, res) => {
         });
     });
 });
+
 //ROTA PARA ALTERAÇÃO DE PRODUTOS (PUT)
 router.put("/produto/editProduto/:id", (req, res) => {
     produtoModel.update({//MÉTODO PARA ATUALIZAR OS DADOS DO MODELO DE DADOS
